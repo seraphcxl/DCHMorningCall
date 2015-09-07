@@ -39,7 +39,7 @@
         self.morningCallLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         self.morningCallLabel.textColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallLabel.font = [UIFont boldSystemFontOfSize:titleFontSize];
-        self.morningCallLabel.text = @"Morning Call";
+        self.morningCallLabel.text = DCHMorningCallLocalizedString(@"str_MorningCall");
         [self.view addSubview:self.morningCallLabel];
     }
     if (DCH_IsEmpty(self.morningCallHourTextField)) {
@@ -48,7 +48,7 @@
         self.morningCallHourTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallHourTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallHourTextField.font = [UIFont systemFontOfSize:textFieldFontSize];
-        [self.morningCallHourTextField setPlaceholder:@"Morning call hour" floatingTitle:@"Morning call hour"];
+        [self.morningCallHourTextField setPlaceholder:DCHMorningCallLocalizedString(@"str_MorningCallHour") floatingTitle:DCHMorningCallLocalizedString(@"str_MorningCallHour")];
         [self.view addSubview:self.morningCallHourTextField];
     }
     if (DCH_IsEmpty(self.morningCallMinuteTextField)) {
@@ -57,7 +57,7 @@
         self.morningCallMinuteTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallMinuteTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallMinuteTextField.font = [UIFont systemFontOfSize:textFieldFontSize];
-        [self.morningCallMinuteTextField setPlaceholder:@"Morning call minute" floatingTitle:@"Morning call minute"];
+        [self.morningCallMinuteTextField setPlaceholder:DCHMorningCallLocalizedString(@"str_MorningCallMinute") floatingTitle:DCHMorningCallLocalizedString(@"str_MorningCallMinute")];
         [self.view addSubview:self.morningCallMinuteTextField];
     }
     if (DCH_IsEmpty(self.morningCallImgView)) {
@@ -83,7 +83,7 @@
         self.siestaCallLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         self.siestaCallLabel.textColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaCallLabel.font = [UIFont systemFontOfSize:titleFontSize];
-        self.siestaCallLabel.text = @"Siesta";
+        self.siestaCallLabel.text = DCHMorningCallLocalizedString(@"str_Siesta");
         [self.view addSubview:self.siestaCallLabel];
     }
     if (DCH_IsEmpty(self.siestaHourTextField)) {
@@ -92,7 +92,7 @@
         self.siestaHourTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaHourTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaHourTextField.font = [UIFont systemFontOfSize:textFieldFontSize];
-        [self.siestaHourTextField setPlaceholder:@"Siesta hour" floatingTitle:@"Siesta hour"];
+        [self.siestaHourTextField setPlaceholder:DCHMorningCallLocalizedString(@"str_SiestaHour") floatingTitle:DCHMorningCallLocalizedString(@"str_SiestaHour")];
         [self.view addSubview:self.siestaHourTextField];
     }
     if (DCH_IsEmpty(self.siestaMinuteTextField)) {
@@ -101,7 +101,7 @@
         self.siestaMinuteTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaMinuteTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaMinuteTextField.font = [UIFont systemFontOfSize:textFieldFontSize];
-        [self.siestaMinuteTextField setPlaceholder:@"Siesta minute" floatingTitle:@"Siesta minute"];
+        [self.siestaMinuteTextField setPlaceholder:DCHMorningCallLocalizedString(@"str_SiestaMinute") floatingTitle:DCHMorningCallLocalizedString(@"str_SiestaMinute")];
         [self.view addSubview:self.siestaMinuteTextField];
     }
     if (DCH_IsEmpty(self.siestaCallImgView)) {

@@ -20,4 +20,6 @@
 #define titleFontSize (32)
 #define textFieldFontSize (20)
 
+#define DCHMorningCallLocalizedString(key) NSLocalizedStringFromTable(key, @"DCHMorningCall", nil)
+
 #endif

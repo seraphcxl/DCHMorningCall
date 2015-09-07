@@ -16,6 +16,7 @@
 		8DBE3B6B1B9D669100DC0C50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBE3B6A1B9D669100DC0C50 /* Images.xcassets */; };
 		8DBE3B6E1B9D669100DC0C50 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBE3B6C1B9D669100DC0C50 /* LaunchScreen.xib */; };
 		8DBE3B7A1B9D669100DC0C50 /* DCHMorningCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE3B791B9D669100DC0C50 /* DCHMorningCallTests.m */; };
+		8DBE3B861B9DB54300DC0C50 /* DCHMorningCall.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DBE3B881B9DB54300DC0C50 /* DCHMorningCall.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,10 @@
 		8DBE3B781B9D669100DC0C50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBE3B791B9D669100DC0C50 /* DCHMorningCallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCHMorningCallTests.m; sourceTree = "<group>"; };
 		8DBE3B831B9D737800DC0C50 /* DCHMorningCallMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCHMorningCallMacro.h; sourceTree = "<group>"; };
+		8DBE3B871B9DB54300DC0C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/DCHMorningCall.strings; sourceTree = "<group>"; };
+		8DBE3B891B9DB56400DC0C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DCHMorningCall.strings"; sourceTree = "<group>"; };
+		8DBE3B8A1B9DB56400DC0C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		8DBE3B8B1B9DB56400DC0C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9E6DD17982598C86510BDE80 /* Pods-DCHMorningCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCHMorningCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-DCHMorningCall/Pods-DCHMorningCall.release.xcconfig"; sourceTree = "<group>"; };
 		A1BA78021E6A8EFBDB3FA124 /* libPods-DCHMorningCallTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCHMorningCallTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70165D5087101540E65B740 /* libPods-DCHMorningCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCHMorningCall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +128,7 @@
 				8DBE3B6A1B9D669100DC0C50 /* Images.xcassets */,
 				8DBE3B6C1B9D669100DC0C50 /* LaunchScreen.xib */,
 				8DBE3B5D1B9D669100DC0C50 /* Supporting Files */,
+				8DBE3B881B9DB54300DC0C50 /* DCHMorningCall.strings */,
 			);
 			path = DCHMorningCall;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 8DBE3B511B9D669100DC0C50;
 			productRefGroup = 8DBE3B5B1B9D669100DC0C50 /* Products */;
@@ -240,6 +247,7 @@
 				8DBE3B691B9D669100DC0C50 /* Main.storyboard in Resources */,
 				8DBE3B6E1B9D669100DC0C50 /* LaunchScreen.xib in Resources */,
 				8DBE3B6B1B9D669100DC0C50 /* Images.xcassets in Resources */,
+				8DBE3B861B9DB54300DC0C50 /* DCHMorningCall.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +357,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8DBE3B681B9D669100DC0C50 /* Base */,
+				8DBE3B8A1B9DB56400DC0C50 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -357,8 +366,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				8DBE3B6D1B9D669100DC0C50 /* Base */,
+				8DBE3B8B1B9DB56400DC0C50 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8DBE3B881B9DB54300DC0C50 /* DCHMorningCall.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DBE3B871B9DB54300DC0C50 /* Base */,
+				8DBE3B891B9DB56400DC0C50 /* zh-Hans */,
+			);
+			name = DCHMorningCall.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

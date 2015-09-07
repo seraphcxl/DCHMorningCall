@@ -1,0 +1,15 @@
+/* 
+  DCHMorningCall.strings
+  DCHMorningCall
+
+  Created by Derek Chen on 9/7/15.
+  Copyright (c) 2015 CHEN. All rights reserved.
+*/
+
+"str_MorningCall" = "叫早";
+"str_MorningCallHour" = "叫早 小时";
+"str_MorningCallMinute" = "叫早 分钟";
+
+"str_Siesta" = "午睡";
+"str_SiestaHour" = "午睡 小时";
+"str_SiestaMinute" = "午睡 分钟";
