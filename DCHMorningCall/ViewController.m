@@ -134,7 +134,7 @@
             make.top.equalTo(self.mas_topLayoutGuide).offset(lPadding);
             make.left.equalTo(superview.mas_left).offset(lPadding);
             make.height.equalTo(@48);
-            make.right.equalTo(superview.mas_right).offset(-lPadding * 4);
+            make.right.equalTo(superview.mas_right).offset(-lPadding * 3);
         }];
         
         
@@ -142,7 +142,7 @@
             make.top.equalTo(self.morningCallLabel.mas_bottom).offset(sPadding);
             make.left.equalTo(superview.mas_left).offset(lPadding);
             make.height.equalTo(@48);
-            make.right.equalTo(superview.mas_right).offset(-lPadding * 4);
+            make.right.equalTo(superview.mas_right).offset(-lPadding * 3);
         }];
         
         
@@ -150,12 +150,12 @@
             make.top.equalTo(self.morningCallHourTextField.mas_bottom).offset(sPadding);
             make.left.equalTo(superview.mas_left).offset(lPadding);
             make.height.equalTo(@48);
-            make.right.equalTo(superview.mas_right).offset(-lPadding * 4);
+            make.right.equalTo(superview.mas_right).offset(-lPadding * 3);
         }];
         
         [self.morningCallSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.morningCallMinuteTextField.mas_centerY);
-            make.left.equalTo(self.morningCallMinuteTextField.mas_right).offset(mPadding);
+            make.right.equalTo(superview.mas_right).offset(-lPadding);
         }];
         
         [self.morningCallImgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -171,7 +171,7 @@
             make.top.equalTo(self.morningCallMinuteTextField.mas_bottom).offset(lPadding);
             make.left.equalTo(superview.mas_left).offset(lPadding);
             make.height.equalTo(@48);
-            make.right.equalTo(superview.mas_right).offset(-lPadding * 4);
+            make.right.equalTo(superview.mas_right).offset(-lPadding * 3);
         }];
         
         
@@ -179,7 +179,7 @@
             make.top.equalTo(self.siestaCallLabel.mas_bottom).offset(sPadding);
             make.left.equalTo(superview.mas_left).offset(lPadding);
             make.height.equalTo(@48);
-            make.right.equalTo(superview.mas_right).offset(-lPadding * 4);
+            make.right.equalTo(superview.mas_right).offset(-lPadding * 3);
         }];
         
         
@@ -187,12 +187,12 @@
             make.top.equalTo(self.siestaHourTextField.mas_bottom).offset(sPadding);
             make.left.equalTo(superview.mas_left).offset(lPadding);
             make.height.equalTo(@48);
-            make.right.equalTo(superview.mas_right).offset(-lPadding * 4);
+            make.right.equalTo(superview.mas_right).offset(-lPadding * 3);
         }];
         
         [self.siestaSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.siestaMinuteTextField.mas_centerY);
-            make.left.equalTo(self.siestaMinuteTextField.mas_right).offset(mPadding);
+            make.right.equalTo(superview.mas_right).offset(-lPadding);
         }];
         
         [self.siestaCallImgView mas_makeConstraints:^(MASConstraintMaker *make) {

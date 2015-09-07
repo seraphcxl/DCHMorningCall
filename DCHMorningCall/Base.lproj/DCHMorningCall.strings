@@ -7,9 +7,9 @@
 */
 
 "str_MorningCall" = "Morning Call";
-"str_MorningCallHour" = "Morning call hour";
-"str_MorningCallMinute" = "Morning call minute";
+"str_MorningCallHour" = "Hour";
+"str_MorningCallMinute" = "Minute";
 
 "str_Siesta" = "Siesta";
-"str_SiestaHour" = "Siesta hour";
-"str_SiestaMinute" = "Siesta minute";
+"str_SiestaHour" = "Hour";
+"str_SiestaMinute" = "Minute";
