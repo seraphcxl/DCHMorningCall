@@ -17,6 +17,7 @@
 		8DBE3B6E1B9D669100DC0C50 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBE3B6C1B9D669100DC0C50 /* LaunchScreen.xib */; };
 		8DBE3B7A1B9D669100DC0C50 /* DCHMorningCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE3B791B9D669100DC0C50 /* DCHMorningCallTests.m */; };
 		8DBE3B861B9DB54300DC0C50 /* DCHMorningCall.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DBE3B881B9DB54300DC0C50 /* DCHMorningCall.strings */; };
+		8DBE3B8F1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE3B8E1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		8DBE3B891B9DB56400DC0C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DCHMorningCall.strings"; sourceTree = "<group>"; };
 		8DBE3B8A1B9DB56400DC0C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		8DBE3B8B1B9DB56400DC0C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8DBE3B8D1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHFloatLabeledTextField.h; sourceTree = "<group>"; };
+		8DBE3B8E1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHFloatLabeledTextField.m; sourceTree = "<group>"; };
 		9E6DD17982598C86510BDE80 /* Pods-DCHMorningCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCHMorningCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-DCHMorningCall/Pods-DCHMorningCall.release.xcconfig"; sourceTree = "<group>"; };
 		A1BA78021E6A8EFBDB3FA124 /* libPods-DCHMorningCallTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCHMorningCallTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70165D5087101540E65B740 /* libPods-DCHMorningCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DCHMorningCall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +132,8 @@
 				8DBE3B6C1B9D669100DC0C50 /* LaunchScreen.xib */,
 				8DBE3B5D1B9D669100DC0C50 /* Supporting Files */,
 				8DBE3B881B9DB54300DC0C50 /* DCHMorningCall.strings */,
+				8DBE3B8D1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.h */,
+				8DBE3B8E1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.m */,
 			);
 			path = DCHMorningCall;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DBE3B8F1B9EB8C500DC0C50 /* DCHFloatLabeledTextField.m in Sources */,
 				8DBE3B661B9D669100DC0C50 /* ViewController.m in Sources */,
 				8DBE3B631B9D669100DC0C50 /* AppDelegate.m in Sources */,
 				8DBE3B601B9D669100DC0C50 /* main.m in Sources */,

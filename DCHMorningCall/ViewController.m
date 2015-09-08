@@ -13,24 +13,33 @@
 #import <Masonry.h>
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
+#import <libextobjc/EXTScope.h>
+#import "DCHFloatLabeledTextField.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) UILabel *morningCallLabel;
-@property (nonatomic, strong) JVFloatLabeledTextField *morningCallHourTextField;
-@property (nonatomic, strong) JVFloatLabeledTextField *morningCallMinuteTextField;
+@property (nonatomic, strong) DCHFloatLabeledTextField *morningCallHourTextField;
+@property (nonatomic, strong) DCHFloatLabeledTextField *morningCallMinuteTextField;
 @property (nonatomic, strong) UIImageView *morningCallImgView;
 @property (nonatomic, strong) UISwitch *morningCallSwitch;
+@property (nonatomic, strong) DCHTrigger *morningCallTrgger;
 
 @property (nonatomic, strong) UILabel *siestaCallLabel;
-@property (nonatomic, strong) JVFloatLabeledTextField *siestaHourTextField;
-@property (nonatomic, strong) JVFloatLabeledTextField *siestaMinuteTextField;
+@property (nonatomic, strong) DCHFloatLabeledTextField *siestaHourTextField;
+@property (nonatomic, strong) DCHFloatLabeledTextField *siestaMinuteTextField;
 @property (nonatomic, strong) UIImageView *siestaCallImgView;
 @property (nonatomic, strong) UISwitch *siestaSwitch;
+@property (nonatomic, strong) DCHTrigger *siestaTrgger;
 
 @end
 
 @implementation ViewController
+
+- (void)dealloc {
+    [self.morningCallTrgger unobserveAll];
+    [self.siestaTrgger unobserveAll];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +52,7 @@
         [self.view addSubview:self.morningCallLabel];
     }
     if (DCH_IsEmpty(self.morningCallHourTextField)) {
-        self.morningCallHourTextField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectZero];
+        self.morningCallHourTextField = [[DCHFloatLabeledTextField alloc] initWithFrame:CGRectZero];
         self.morningCallHourTextField.keyboardType = UIKeyboardTypeNumberPad;
         self.morningCallHourTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallHourTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
@@ -52,7 +61,7 @@
         [self.view addSubview:self.morningCallHourTextField];
     }
     if (DCH_IsEmpty(self.morningCallMinuteTextField)) {
-        self.morningCallMinuteTextField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectZero];
+        self.morningCallMinuteTextField = [[DCHFloatLabeledTextField alloc] initWithFrame:CGRectZero];
         self.morningCallMinuteTextField.keyboardType = UIKeyboardTypeNumberPad;
         self.morningCallMinuteTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.morningCallMinuteTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
@@ -75,7 +84,7 @@
                 self.morningCallImgView.image = [UIImage imageNamed:@"bulb_F"];
             }
         } forControlEvents:UIControlEventValueChanged];
-        
+        self.morningCallSwitch.enabled = NO;
         [self.view addSubview:self.morningCallSwitch];
     }
     
@@ -87,7 +96,7 @@
         [self.view addSubview:self.siestaCallLabel];
     }
     if (DCH_IsEmpty(self.siestaHourTextField)) {
-        self.siestaHourTextField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectZero];
+        self.siestaHourTextField = [[DCHFloatLabeledTextField alloc] initWithFrame:CGRectZero];
         self.siestaHourTextField.keyboardType = UIKeyboardTypeNumberPad;
         self.siestaHourTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaHourTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
@@ -96,7 +105,7 @@
         [self.view addSubview:self.siestaHourTextField];
     }
     if (DCH_IsEmpty(self.siestaMinuteTextField)) {
-        self.siestaMinuteTextField = [[JVFloatLabeledTextField alloc] initWithFrame:CGRectZero];
+        self.siestaMinuteTextField = [[DCHFloatLabeledTextField alloc] initWithFrame:CGRectZero];
         self.siestaMinuteTextField.keyboardType = UIKeyboardTypeNumberPad;
         self.siestaMinuteTextField.floatingLabelTextColor = clr_DCHMorningCall_MainThemeColor;
         self.siestaMinuteTextField.floatingLabelActiveTextColor = clr_DCHMorningCall_MainThemeColor;
@@ -119,8 +128,48 @@
                 self.siestaCallImgView.image = [UIImage imageNamed:@"bulb_F"];
             }
         } forControlEvents:UIControlEventValueChanged];
-        
+        self.siestaSwitch.enabled = NO;
         [self.view addSubview:self.siestaSwitch];
+    }
+    
+    if (DCH_IsEmpty(self.morningCallTrgger)) {
+        self.morningCallTrgger = [[DCHTrigger alloc] init];
+        @weakify(self)
+        [self.morningCallTrgger addAction:^(DCHTrigger *trigger, NSDictionary *exInfo) {
+            @strongify(self)
+            do {
+                if (self.morningCallHourTextField.vaild && self.morningCallMinuteTextField.vaild) {
+                    self.morningCallSwitch.enabled = YES;
+                } else {
+                    self.morningCallSwitch.enabled = NO;
+                }
+            } while (NO);
+        } onCondition:^BOOL(DCHTrigger *trigger, NSDictionary *exInfo) {
+            return YES;
+        }];
+        
+        [self.morningCallTrgger observe:self.morningCallHourTextField keyPath:@"vaild"];
+        [self.morningCallTrgger observe:self.morningCallMinuteTextField keyPath:@"vaild"];
+    }
+    
+    if (DCH_IsEmpty(self.siestaTrgger)) {
+        self.siestaTrgger = [[DCHTrigger alloc] init];
+        @weakify(self)
+        [self.siestaTrgger addAction:^(DCHTrigger *trigger, NSDictionary *exInfo) {
+            @strongify(self)
+            do {
+                if (self.siestaHourTextField.vaild && self.siestaMinuteTextField.vaild) {
+                    self.siestaSwitch.enabled = YES;
+                } else {
+                    self.siestaSwitch.enabled = NO;
+                }
+            } while (NO);
+        } onCondition:^BOOL(DCHTrigger *trigger, NSDictionary *exInfo) {
+            return YES;
+        }];
+        
+        [self.siestaTrgger observe:self.siestaHourTextField keyPath:@"vaild"];
+        [self.siestaTrgger observe:self.siestaMinuteTextField keyPath:@"vaild"];
     }
 }
 
